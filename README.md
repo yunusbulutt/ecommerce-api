@@ -24,7 +24,7 @@ $ http :3000/customers
 # POST /customers
 $ http POST :3000/customers name='Yunus' surname='Bulut' email='bulutt1404ægmail.com' phone:'+905552170168'
 # PUT /customers/:id
-$ http PUT :3000/customers/1 name=Yunus
+$ http PUT :3000/customers/1 name='Yunus'
 # DELETE /customers/:id
 $ http DELETE :3000/customers/1
 ```
@@ -41,7 +41,7 @@ $ http :3000/customers/2/products
 # POST /customers/:customer_id/products
 $ http POST :3000/customers/2/products title='T-Shirt' price=35 quantity=100
 # PUT /customers/:customer_id/products/:id
-$ http PUT :3000/customers/2/products/1 done=true
+$ http PUT :3000/customers/2/products/1 title='T-Shirt'
 # DELETE /customers/:customer_id/products/1
 $ http DELETE :3000/customers/2/products/1
 ```
@@ -54,7 +54,7 @@ $ http :3000/customers/2/orders
 # POST /customers/:customer_id/orders
 $ http POST :3000/customers/2/orders order_no=34521445
 # PUT /customers/:customer_id/orders/:id
-$ http PUT :3000/customers/2/orders/1 done=true
+$ http PUT :3000/customers/2/orders/1 order_no=34521445
 # DELETE /customers/:customer_id/orders/1
 $ http DELETE :3000/customers/2/orders/1
 ```
@@ -67,6 +67,11 @@ $ http :3000/customers/2/carts
 # DELETE /customers/:customer_id/carts/1
 $ http DELETE :3000/customers/2/carts/1
 ```
+
+## Validations
+
+![Customer Validation](images/validation_customer.png)
+![Product Validation](images/validation_product.png)
 
 ## RSpec with Unit Test and Integration Test
 
